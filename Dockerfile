@@ -1,4 +1,4 @@
-FROM arm32v7/ruby:2.5
+FROM ruby:2.5
 MAINTAINER Stanislav Mekhonoshin <ejabberd@gmail.com>
 
 RUN apt-get -y update
@@ -7,3 +7,5 @@ RUN gem install foreman
 COPY . /gems/
 WORKDIR /gems
 RUN bundle install
+
+ENTRYPOINT ["/gems/entrypoint.sh"]

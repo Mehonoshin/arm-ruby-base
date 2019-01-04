@@ -1,3 +1,3 @@
 #!/bin/sh
-docker build -t mexx/ruby-base:rpi .
-docker push mexx/ruby-base:rpi
+docker build -t mexx/ruby-base .
+docker push mexx/ruby-base
